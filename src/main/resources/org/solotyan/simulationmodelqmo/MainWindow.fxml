@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.solotyan.simulationmodelqmo.MainController">
+   <TextField fx:id="q1TextField" layoutX="465.0" layoutY="70.0" prefHeight="40.0" prefWidth="115.0"/>
+   <Label layoutX="100.0" layoutY="20.0" text="Введите входные параметры">
+      <font>
+         <Font size="28.0"/>
+      </font>
+   </Label>
+   <Label layoutX="255.0" layoutY="70.0" prefHeight="40.0" prefWidth="210.0"
+          text="Время обслуживания q при &#10;случайном значении R&lt;0.5:">
+      <font>
+         <Font size="15.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="q2TextField" layoutX="465.0" layoutY="130.0" prefHeight="40.0" prefWidth="115.0"/>
+   <Label layoutX="255.0" layoutY="130.0" text="Время обслуживания q при&#10;случайном значении R≥0.5:">
+      <font>
+         <Font size="15.0"/>
+      </font>
+   </Label>
+   <Label layoutX="255.0" layoutY="190.0" text="Интенсивность входного&#10;потока λ:">
+      <font>
+         <Font size="15.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="lambdaTextField" layoutX="465.0" layoutY="190.0" prefHeight="40.0" prefWidth="115.0"/>
+   <Label layoutX="255.0" layoutY="252.0" text="Время моделирования T:">
+      <font>
+         <Font size="15.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="periodTextField" layoutX="465.0" layoutY="250.0" prefHeight="30.0" prefWidth="115.0"/>
+   <ListView fx:id="randomValuesList" editable="true" layoutX="20.0" layoutY="130.0" prefHeight="300.0"
+             prefWidth="200.0"/>
+   <Label layoutX="20.0" layoutY="70.0" text="Случайные значения R:">
+      <font>
+         <Font size="15.0"/>
+      </font>
+   </Label>
+   <Button layoutX="20.0" layoutY="430.0" mnemonicParsing="false" onAction="#onAutoFillButtonClick" prefHeight="50.0"
+           prefWidth="200.0" text="Заполнить автоматически"/>
+   <Label layoutX="20.0" layoutY="100.0" text="Количество чисел:">
+      <font>
+         <Font size="15.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="randomValuesTextField" layoutX="160.0" layoutY="98.0" prefHeight="26.0" prefWidth="61.0" text="0"/>
+   <Hyperlink layoutX="250.0" layoutY="300.0" onAction="#showInformation"
+              text="Узнать дополнительную информацию по теме">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Hyperlink>
+   <AnchorPane layoutX="220.0" layoutY="330.0" prefHeight="170.0" prefWidth="380.0">
+      <Button fx:id="buttonStart" layoutX="70.0" layoutY="55.0" mnemonicParsing="false"
+              onAction="#onStartButtonClick" prefHeight="60.0" prefWidth="240.0" text="Начать моделирование"
+              AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0"
+              AnchorPane.topAnchor="55.0"/>
+   </AnchorPane>
+</Pane>
